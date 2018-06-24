@@ -6,7 +6,6 @@ require_once( 'Run.php' );
 
 // création des véhicules
 $bmw = new Vehicle('Phantom ', 'Framboise', 1, 2);
-
 $mercedes = new Vehicle('Monster 5', 'Gris', 6, 3);
 $batmobile = new Vehicle('Batmobile 3000', 'Noir', 2, 4 );
 $venger = new Vehicle('Venger GT', 'Bleu', 1, 12 );

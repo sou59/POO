@@ -4,7 +4,7 @@ class Run {
     private $track;
     // nb de tours
     private $laps;
-    // comme il sagit d'un tableau on va l'ecrire au pluriel
+    // comme il s'agit d'un tableau on va l'ecrire au pluriel
     private $players = array();
     // classement ordre de place dans la grille d'arrivée
     private $ranking = array();
@@ -22,8 +22,10 @@ class Run {
         // array_push($this->players, $player);
     }
 
-    
 
+    /**
+     *
+     */
     public function simulate(){
         // Boucles pour  créer un tableau avec les joueurs
         foreach ( $this->players as $player  ) {
@@ -104,12 +106,6 @@ class Run {
         //    echo "<br \>";
         }
         
-
-
     }
-
-
-
-
 
 }

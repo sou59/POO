@@ -42,9 +42,13 @@ class Vehicle {
     public function turn($radius){
         // ... manque les notions d'espace
     }
+
+    // aller en arrière
     public function reverse(){
         $this->speed = -1;
     }
+
+    // arrêter
     public function stop(){
         $this->engine = false;
     }
