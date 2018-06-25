@@ -1,5 +1,12 @@
 <?php
-class Vehicle {
+
+namespace APP\Vehicle;
+// interdit de créer des véhicule avec $x = new Vehicle();
+    abstract class Vehicle {
+
+    const LOW_WEIGHT = 1;
+    const MEDIUM_WEIGHT = 2;
+    const HEAVY_WEIGHT = 3;
 
     // le moteur, sa position est etteinte par défaut
     private $engine = false;
@@ -8,8 +15,11 @@ class Vehicle {
     private $wheels;
     private $color;
     // poids
+    
     private $weight;
     private $model;
+
+    public abstract function powerUp();
 
     public function __construct($model, $color, $wheels, $weight){
         $this->model = $model;
