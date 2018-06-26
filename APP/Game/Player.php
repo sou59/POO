@@ -4,6 +4,8 @@ namespace APP\Game;
 
 use APP\Vehicle\Vehicle;
 
+use APP\Game\Bonus;
+
 // la class ne peut pas être étendue
 final class Player {
     use Bonus;

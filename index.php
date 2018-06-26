@@ -32,6 +32,7 @@ $bmw = new Car('Phantom ', 'Framboise', 1, Vehicle::LOW_WEIGHT);
 $mercedes = new Car('Monster 5', 'Gris', 6, Vehicle::MEDIUM_WEIGHT);
 $batmobile = new Cycle('Batmobile 3000', 'Noir', 2, Vehicle::LOW_WEIGHT );
 $venger = new Overboard('Venger GT', 'Bleu', 1, Vehicle::HEAVY_WEIGHT );
+// ajouter un bonus à cette voiture
 $venger->addBonus();
 
 // création des jouers
@@ -39,6 +40,9 @@ $messi = new Player('Rambo', 'us', $mercedes, '');
 $ronaldo = new Player('Killer', 'fr', $bmw, '' );
 $bruce = new Player('Batman', 'uk', $batmobile, '' );
 $paul = new Player('Marcel', 'be', $venger, '' );
+// ajouter un bonus à cette voiture
+$bruce->addBonus();
+
 // création des jouers non inscrits
 $falbala = new Player('Falba', 'us', $mercedes, '');
 $kante = new Player('Kante', 'fr', $bmw, '' );
@@ -58,8 +62,6 @@ $run1->addPlayer($messi);
 $run1->addPlayer($ronaldo);
 $run1->addPlayer($bruce);
 $run1->addPlayer($paul);
-$run1->addPlayer($falbala);
-$run1->addPlayer($kante);
 //var_dump($run1);
 $run1->simulate();
 
@@ -72,7 +74,7 @@ $run2 = Run::generateRun();
 $run2->addPlayer($messi);
 $run2->addPlayer($ronaldo);
 $run2->addPlayer($pixel);
-$run2->addPlayer($lukaku);
+$run1->addPlayer($paul);
 
 $run2->simulate();
 
