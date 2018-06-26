@@ -3,6 +3,7 @@
 namespace APP\Vehicle;
 // interdit de créer des véhicule avec $x = new Vehicle();
     abstract class Vehicle {
+        use Bonus;
 
     const LOW_WEIGHT = 1;
     const MEDIUM_WEIGHT = 2;

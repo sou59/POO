@@ -11,7 +11,7 @@ class OverBoard extends Vehicle {
         $this->brand = $brand;
     }
     public function powerUp() {
-        echo "Choucroute du soleil<br\>";
+        //echo "Choucroute du soleil<br\>";
 
     }
 

@@ -3,8 +3,10 @@
 namespace APP\Game;
 
 use APP\Vehicle\Vehicle;
+use APP\Game\Player;
+use APP\Entity\Track;
 
-class Run {
+class Run implements \Countable {
     // tracé de la course
     private $track;
     // nb de tours
@@ -15,7 +17,11 @@ class Run {
     private $ranking = array();
 
     // tableau avec tous les circuits
-    private static $tracks = ['Monza', 'Indianapolis', 'SPA', 'Monaco'];
+    // private static $tracks = ['Monza', 'Indianapolis', 'SPA', 'Monaco'];
+
+    public function count(){
+        return count($this->players);
+    }
 
     public function __construct($track, $laps = 3) {
         $this->track = $track;
@@ -32,14 +38,13 @@ class Run {
     public static function generateRun() {
         // create new Run
         // nb de circuit et nobre de tours
-
         // tiré un cirduit aléatoirement:
         //1ere méthode fonction array_rand
-        $randomTrack = array_rand(self::$tracks);
+        $track = Track::getRandom();
         // générerer un nombre de tour
         $laps = rand(1, 10);
 
-        return new Run(self::$tracks[$randomTrack], $laps);
+        return new Run($track->getName(), $laps);
         //2e méthode fonction manuelle
     }
 
@@ -61,6 +66,8 @@ class Run {
         $this->updatePlayers();
         self::generateRun();
         $this->showRanking();
+        // $this->savePlayer();
+        // $this->rePlayer();
         
     }
 
@@ -122,11 +129,10 @@ class Run {
 
     }
 
-
     // affichage des données
     private function showRanking(){
         echo 'Grand prix de <strong></strong>' .$this->track. "</strong><br \>";
-        echo count($this->players). " participant au début de la course et ". (Player::getCounter()-count($this->players)). " spectateurs. <br \>";
+        echo count($this). " participant au début de la course et ". (Player::getCounter()-count($this->players)). " spectateurs. <br \>";
         echo 'Classement général : <br \>';
 
         foreach ($this->ranking as $index => $rank) {
@@ -140,14 +146,11 @@ class Run {
                 echo '<br \>';
             } else {
                 echo $rank['player']->getUsername() . ' : abondon <br \>';
-                
+                echo "<br \>";
             }
 
         }
 
     }
-
-
-
 
 }

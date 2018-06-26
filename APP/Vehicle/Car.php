@@ -9,7 +9,7 @@ class Car extends Vehicle {
     private $engine = false;
 
     public function powerUp() {
-        echo "Choucroute de la mer <br\>";
+        //echo "<br\> Choucroute de la mer <br\>";
 
     }
 }

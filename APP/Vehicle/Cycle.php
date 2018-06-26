@@ -11,7 +11,7 @@ class Cycle extends Vehicle {
     //     $this->size = $size;
     // }
     public function powerUp() {
-        echo "Choucroute de la neige<br\>";
+        //echo "Choucroute de la neige<br\>";
 
     }
     
