@@ -40,10 +40,10 @@ $messi = new Player('Rambo', 'us', $mercedes, '');
 $ronaldo = new Player('Killer', 'fr', $bmw, '' );
 $bruce = new Player('Batman', 'uk', $batmobile, '' );
 $paul = new Player('Marcel', 'be', $venger, '' );
-// ajouter un bonus à cette voiture
+// ajouter un bonus à ce joueur
 $bruce->addBonus();
 
-// création des jouers non inscrits
+// création des jouers non inscrits à une course
 $falbala = new Player('Falba', 'us', $mercedes, '');
 $kante = new Player('Kante', 'fr', $bmw, '' );
 
